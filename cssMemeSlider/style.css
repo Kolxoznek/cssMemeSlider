@@ -13,6 +13,7 @@ body {
     max-width: 1280px;
     margin: 5vh auto;
     padding: 32px;
+    border-radius: 20px;
     background: rgba(111, 197, 107, 0.2);
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -63,9 +64,7 @@ body {
 }
 .navigation {
     justify-self: end;
-    width: 110px;
-    height: 20px;
-    padding: 10px 20px;
+    padding: 0px 20px;
     border-radius: 10px;
     display: flex;
     gap: 10px;
@@ -73,8 +72,34 @@ body {
 }
 .dot {
     display: block;
-    width: 20px;
-    height: 20px;
-    background: #fff;
+    width: 40px;
+    height: 40px;
 }
 
+.dot span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    transform: translate(5px, 5px);
+    border: 2px solid #1bb45b;
+    border-radius: 8px;
+    transition: all 0.5s;
+}
+
+.dot:hover span {
+    background: #1bb45b;
+}
+
+[id="btn1"]:checked ~ .navigation [for="btn1"] span {
+    background: #13e96c;
+}
+[id="btn2"]:checked ~ .navigation [for="btn2"] span {
+    background: #13e96c;
+}
+[id="btn3"]:checked ~ .navigation [for="btn3"] span {
+    background: #13e96c;
+}
+[id="btn4"]:checked ~ .navigation [for="btn4"] span {
+    background: #13e96c;
+}
